@@ -1,0 +1,78 @@
+.banners {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 22px 24px;
+  border-radius: var(--radius);
+  min-height: 128px;
+}
+
+.banner--green {
+  background: linear-gradient(120deg, #0c831f 0%, #16a34a 100%);
+  color: #fff;
+}
+
+.banner--yellow {
+  background: linear-gradient(120deg, #f8cb46 0%, #fddc72 100%);
+  color: var(--ink);
+}
+
+.banner__text {
+  position: relative;
+  z-index: 1;
+}
+
+.banner__kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.banner__title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  line-height: 1.1;
+}
+
+.banner__sub {
+  font-size: 12.5px;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+.banner__emoji {
+  font-size: 62px;
+  line-height: 1;
+  opacity: 0.9;
+  transform: rotate(-6deg);
+}
+
+@media (max-width: 720px) {
+  .banners {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .banner {
+    min-height: 108px;
+    padding: 18px;
+  }
+  .banner__title {
+    font-size: 19px;
+  }
+  .banner__emoji {
+    font-size: 46px;
+  }
+}
